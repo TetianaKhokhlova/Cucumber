@@ -1,4 +1,4 @@
-Feature:Scenario Outline
+Feature: Scenario Outline
 
   Scenario Outline: Learning Scenario Outline
 

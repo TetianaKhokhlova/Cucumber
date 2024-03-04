@@ -10,44 +10,46 @@ import utilities.ReusableMethods;
 public class _03_CitizenshipCreateStep {
 
     SetUpPage setUpPage = new SetUpPage();
- //   @And("I click the Citizenship button")
- //   public void iClickTheCitizenshipButton() {
-  //      ReusableMethods.wait(1);
-  //      setUpPage.clickElement(setUpPage.citizenshipButton);
-  //  }
+
     @When("I click the Citizenship button")
     public void i_click_the_citizenship_button() {
         ReusableMethods.wait(1);
         setUpPage.clickElement(setUpPage.citizenshipButton);
     }
-    @And("I click add the citizenship icon")
-    public void iClickAddTheCitizenshipIcon() {
+
+
+    @When("I click add the citizenship icon")
+    public void i_click_add_the_citizenship_icon() {
         ReusableMethods.wait(1);
         setUpPage.clickElement(setUpPage.citizenshipAddingIcon);
+
     }
 
-    @And("I enter {string} in the name text box")
-    public void iEnterInTheNameTextBox(String name) {
+
+    @When("I enter {string} in the name text box")
+    public void i_enter_in_the_name_text_box(String name) {
         ReusableMethods.wait(1);
         setUpPage.sendKeys(setUpPage.citizenNameTextBox, name);
     }
 
-    @And("I enter {string} in the shortname text box")
-    public void iEnterInTheShortnameTextBox(String shortname) {
+    @When("I enter {string} in the shortname text box")
+    public void i_enter_in_the_shortname_text_box(String shortname) {
         ReusableMethods.wait(1);
         setUpPage.sendKeys(setUpPage.citizenshortNameTextBox, shortname);
     }
-
-    @And("I click on the save button")
-    public void iClickOnTheSaveButton() {
+    @When("I click on the save button")
+    public void i_click_on_the_save_button() {
         ReusableMethods.wait(1);
         setUpPage.clickElement(setUpPage.addingCitizenSaveButton);
+
     }
 
+
     @Then("I should see the {string} message")
-    public void iShouldSeeTheMessage(String message) {
+    public void i_should_see_the_message(String message) {
         ReusableMethods.wait(1);
         Assert.assertEquals(setUpPage.addingCitizenSuccessfullyMessage.getText(), message);
+
     }
 
     @And("I enter name {string} in the name text box")
@@ -55,6 +57,9 @@ public class _03_CitizenshipCreateStep {
         ReusableMethods.wait(1);
         setUpPage.sendKeys(setUpPage.citizenNameTextBox, name);
     }
+
+
+
 
     @And("I enter shortname {string} in the shortname text box")
     public void iEnterShortnameInTheShortnameTextBox(String shortname) {

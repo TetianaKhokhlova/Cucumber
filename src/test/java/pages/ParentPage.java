@@ -1,6 +1,7 @@
 package pages;
 
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -12,10 +13,9 @@ import org.testng.Assert;
 import utilities.ThreadSafeDriver;
 
 import java.time.Duration;
-import java.util.logging.Logger;
 
 public class ParentPage {
-   // protected static final Logger log = LogManager.getLogger();
+   protected static final Logger log =LogManager.getLogger();
     public WebDriverWait wait = new WebDriverWait(ThreadSafeDriver.getDriver(), Duration.ofSeconds(10));
 
     public ParentPage() {
@@ -52,7 +52,7 @@ public class ParentPage {
     }
 
     public boolean isWebElementDisplayed(WebElement webElement) {
-     //   log.trace("isWebElementDisplayed(" + webElement + ")");
+      log.trace("isWebElementDisplayed(" + webElement + ")");
 
         return webElement.isDisplayed();
     }
